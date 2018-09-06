@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "demo.author.age",
+      "type": "java.lang.String",
+      "description": "Description for demo.author.age."
+  }
+] }

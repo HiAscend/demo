@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * HelloWorldController
  *
@@ -41,7 +43,8 @@ public class HelloWorldController {
     }
 
     @RequestMapping(path = "/getAuthor")
-    public DemoProperties getAuthor() {
+    public DemoProperties getAuthor(HttpServletRequest request) {
+        String requestURI = request.getRequestURI();
         LOG.debug("这是我故意打印的日志");
         System.out.println(demoProperties.toString());
         return demoProperties;
